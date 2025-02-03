@@ -15,6 +15,7 @@ import re
 
 # Download NLTK data
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 nltk.download('vader_lexicon')
 
