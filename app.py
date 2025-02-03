@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, render_template_string, request, jsonify
-from pyngrok import ngrok
-import threading
+
 from datasets import load_dataset
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
