@@ -12,6 +12,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from flask_cors import CORS
 import re
+import os
 
 # Download NLTK data
 nltk.download('punkt')
@@ -191,14 +192,9 @@ def home():
 def run_flask():
     app.run(host="0.0.0.0", port=8000)
 
-# Create a thread for Flask app to run
-def start_ngrok():
-    public_url = ngrok.connect(8000)
-    print(f" * Ngrok tunnel \"{public_url}\" -> \"http://127.0.0.1:8000\"")
 
 # Start Flask server with threading
 if __name__ == "__main__":
-    threading.Thread(target=start_ngrok).start()
     threading.Thread(target=run_flask).start()
 
 
